@@ -1,0 +1,9 @@
+*.zip
+*.class
+*/bin
+*/target
+.metadata
+.recommenders
+RemoteSystemsTempFiles/
+**/*.jar
+*/gradle
