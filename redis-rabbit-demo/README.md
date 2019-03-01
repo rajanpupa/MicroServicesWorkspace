@@ -10,3 +10,6 @@ Looks like, by default rabbitmq rejects connections from external host from the 
 
 Need to change the password or create a new user will appropriate permissions.
 
+
+Redis-Cache source:
+https://www.foreach.be/blog/spring-cache-annotations-some-tips-tricks
