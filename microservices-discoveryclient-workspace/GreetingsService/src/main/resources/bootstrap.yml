@@ -1,0 +1,11 @@
+---
+spring:
+  application:
+    name: greetings-service
+
+
+management:
+  security:
+    enabled: false
+
+

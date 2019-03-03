@@ -1,0 +1,26 @@
+server:
+  port: ${vcap.application.port:9000}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://localhost:8761}/eureka/
+  instance:
+    hostname: ${vcap.application.uris:localhost}
+    nonSecurePort: 80
+spring:
+  profiles:
+    active: default
+endpoints:
+  restart:
+    enabled: true
+  health:
+    sensitive: false
+management:
+  security:
+    enabled: false
+logging:
+  file: debug.log
+  
+hystrix:
+  metrics:
+    enabled: false

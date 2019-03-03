@@ -1,0 +1,11 @@
+.metadata
+.metadata/*
+.recommenders
+RemoteSystemsTempFiles
+Servers/
+
+**/.mvn
+
+*.jar
+*.class
+

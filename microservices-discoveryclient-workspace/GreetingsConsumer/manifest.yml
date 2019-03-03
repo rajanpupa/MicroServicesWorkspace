@@ -1,0 +1,15 @@
+---
+applications:
+- name: greetings-consumer
+  memory: 512M
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git#v3.7
+  host: greetings-consumer
+  domain: apps-np.homedepot.com
+  path: ./target/GreetingsService-0.0.1-SNAPSHOT.jar
+  services:
+    - eureka-service
+  env:
+    MESSAGING_ENVIRONMENT: DEV
+    SPRING_PROFILES_ACTIVE: CLOUD
+    LIFECYCLE: DEV
+    CANONICAL_SERVICE_URL: https://login.run-np.homedepot.com/login

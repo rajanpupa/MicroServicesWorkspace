@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: greetings-consumer
+
+
+management:
+  security:
+    enabled: false
+
+

@@ -1,0 +1,26 @@
+server:
+  port: ${vcap.application.port:8761}
+  
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
+  instance:
+    hostname: ${vcap.application.uris:localhost}
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    enable-self-preservation: false
+    response-cache-update-interval-ms: 1000
+    
+    
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
+      
+
+
