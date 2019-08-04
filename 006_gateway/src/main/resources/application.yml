@@ -1,0 +1,24 @@
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    app1:
+      path: /app1/**
+      url: http://localhost:8081/
+    orfin_manifestbusinessrules:
+      path: /app2/**
+      url: http://localhost:8082/
+security:
+  basic:
+    enabled: false
+  user:
+    name: user
+    password: pass
+management:
+  security:
+    enabled: false
+ribbon:
+  eureka:
+    enabled: true
+spring:
+  application:
+    name: gateway

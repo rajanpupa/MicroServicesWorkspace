@@ -1,0 +1,26 @@
+zuul:
+  routes:
+    orfin_visservice:
+      path: /vis/**
+      url: https://orfin-vehicleupdateprocessor-dev.apps.pp01.useast.cf.ford.com/
+    orfin_manifestbusinessrules:
+      path: /mbr/**
+      url: https://orfin-manifestbusinessrules-dev.apps.pp01.useast.cf.ford.com/
+    orfin_vehicleupdateprocessor:
+      path: /vup/**
+      url: https://orfin-vehicleupdateprocessor-dev.apps.pp01.useast.cf.ford.com/
+security:
+  basic:
+    enabled: false
+  user:
+    name: user
+    password: pass
+management:
+  security:
+    enabled: false
+ribbon:
+  eureka:
+    enabled: false
+spring:
+  application:
+    name: gateway

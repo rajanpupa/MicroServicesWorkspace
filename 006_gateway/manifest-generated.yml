@@ -1,0 +1,10 @@
+---
+applications:
+- name: ORFIN-Gateway
+  host: ORFIN-Gateway
+  buildpack: java_buildpack
+  memory: 512M
+  instances: 1
+  env:
+    _JAVA_OPTIONS: -Dlogging.level.org.springframework.web=DEBUG -Dlogging.level.org.springframework.ws.client.MessageTracing.sent=DEBUG -Dlogging.level.org.springframework.ws.client.MessageTracing.received=DEBUG
+    SPRING_CLOUD_CONFIG_PROFILE: dev

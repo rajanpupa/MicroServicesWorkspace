@@ -1,4 +1,4 @@
 ---
 spring:
   application:
-    name: 004_testApp_new
+    name: 004_testApp1
